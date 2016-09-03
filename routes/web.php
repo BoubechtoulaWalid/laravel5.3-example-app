@@ -12,8 +12,7 @@
 */
 
 Route::get('/', [
-    'uses' => 'PostsController@index',
-    'as'   => 'posts.index'
+    'uses' => 'PostsController@index'
 ]);
 
 Route::get('/blog', [
