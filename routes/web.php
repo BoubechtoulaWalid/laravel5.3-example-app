@@ -20,3 +20,8 @@ Route::get('/blog', [
     'uses' => 'PostsController@index',
     'as'   => 'posts.index'
 ]);
+
+Route::get('/blog/{post_id}', [
+    'uses' => 'PostsController@show',
+    'as'   => 'posts.show'
+]);
