@@ -27,12 +27,19 @@
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="{{ route('posts.index') }}">Blog</a></li>
+                        <li><a href="{{ route('contacts') }}">Contacts</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
 
         <div class="container main">
+
+            @if(Session::has('message'))
+                <div class="alert alert-info">
+                    {{ Session::get('message') }}
+                </div>
+            @endif
 
             @yield('content')
 

@@ -9,6 +9,7 @@ class DatabaseSeeder extends Seeder
 {
     private $tables = array(
         'posts',
+        'messages'
     );
 
     /**

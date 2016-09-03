@@ -24,3 +24,13 @@ Route::get('/blog/{post_id}', [
     'uses' => 'PostsController@show',
     'as'   => 'posts.show'
 ]);
+
+Route::get('/contacts', [
+    'uses' => 'ContactsController@contacts',
+    'as'   => 'contacts'
+]);
+
+Route::post('/contacts/send', [
+    'uses' => 'ContactsController@send',
+    'as'   => 'contacts.send'
+]);
