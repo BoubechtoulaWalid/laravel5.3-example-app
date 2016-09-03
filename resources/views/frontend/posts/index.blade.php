@@ -2,5 +2,10 @@
 
 @section('content')
     <h1>Blog</h1>
-    <p>Here will be a list of blog posts.</p>
+    @foreach($posts as $post)
+        <div class="post">
+            <h3>{{ $post->title }}</h3>
+            {!! $post->content !!}
+        </div>
+    @endforeach
 @endsection
