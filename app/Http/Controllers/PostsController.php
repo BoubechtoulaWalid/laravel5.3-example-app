@@ -9,7 +9,7 @@ use App\Http\Requests;
 class PostsController extends Controller
 {
     public function index() {
-        $posts = Post::all();
+        $posts = Post::paginate(5);
 
         return view('frontend.posts.index', compact('posts'));
     }

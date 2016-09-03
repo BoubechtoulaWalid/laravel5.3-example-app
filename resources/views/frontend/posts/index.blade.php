@@ -8,4 +8,5 @@
             {!! $post->content !!}
         </div>
     @endforeach
+    {{ $posts->links() }}
 @endsection
